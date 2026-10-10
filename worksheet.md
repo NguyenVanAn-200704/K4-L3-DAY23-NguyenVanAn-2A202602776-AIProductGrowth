@@ -190,5 +190,5 @@ Các tên file evidence là đầu ra phải thu trong pilot, **không** khẳng
 - PRD: `Project/P-100/docs/ba/02-prd.md`, cập nhật04/10, đọc 10/10/2026; đặc biệt §1, §2, FR-06, BR-01, §6 và C-02.
 - Day22: `Track1_Day22_2A202602776_NguyenVanAn/NguyenVanAn_Day22_model.xlsx`; SHA256 `01a77513aea22b2e00c9488ad6eec16e0b197657224778f4fb7b473a450549db`. Đọc công thức và tự tính, không dựa vào cache Excel. Không sửa workbook nguồn.
 - Critique log ngày 08/10: DMS10 USD/tháng, OA 41.667đ/tháng, setup50–100 USD, monitoring29 USD/tháng. Đây là giả định nguồn của bài trước, không phải báo giá kiểm tra hôm nay.
-- HANDBOOK §§2/3.3 kiểm tra10/10: https://github.com/VinUni-AI 20 k/K4-L3-Day23-AI-Product-Growth/blob/main/HANDBOOK.md
+- HANDBOOK §§2/3.3 kiểm tra 10/10: https://github.com/VinUni-AI20k/K4-L3-Day23-AI-Product-Growth/blob/main/HANDBOOK.md
 - AI hỗ trợ dự thảo và phản biện; tác giả cần đọc, chốt ngưỡng/luật/cổng bằng lời mình. Không tự chấm điểm hoặc khẳng định pilot được nghiệm thu.

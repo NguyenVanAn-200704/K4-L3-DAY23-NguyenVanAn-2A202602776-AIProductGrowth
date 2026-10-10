@@ -27,7 +27,7 @@ Giữ đúng PRD: Rule Engine quyết định hạng mục; DB tính giá; RAG g
 1. PRD P-100: `Project/P-100/docs/ba/02-prd.md`, bản cập nhật 04/10/2026; đọc ngày 10/10/2026, §§1–2, FR-04/05/06/24, BR-01/02/03, §6. Đây là yêu cầu thiết kế, chưa phải kiểm chứng runtime.
 2. `TongHop_LAB/Track1_Day22_2A202602776_NguyenVanAn/NguyenVanAn_Day22_model.xlsx`, đọc ngày 10/10/2026; ô nguồn và phép tính nằm trong worksheet.
 3. Critique log cùng thư mục Day22, ngày 08/10/2026: đề nghị bổ sung DMS, Zalo OA và monitoring.
-4. [HANDBOOK Day23](https://github.com/VinUni-AI 20 k/K4-L3-Day23-AI-Product-Growth/blob/main/HANDBOOK.md), §§2 và 3.3; [Rubric](https://github.com/VinUni-AI 20 k/K4-L3-Day23-AI-Product-Growth/blob/main/RUBRIC.md). Đối chiếu ngày 10/10/2026. Các mốc [TB] trong sổ tay được dùng như giả thuyết ban đầu, không gắn nhãn benchmark.
+4. [HANDBOOK Day23](https://github.com/VinUni-AI20k/K4-L3-Day23-AI-Product-Growth/blob/main/HANDBOOK.md), §§2 và 3.3; [Rubric](https://github.com/VinUni-AI20k/K4-L3-Day23-AI-Product-Growth/blob/main/RUBRIC.md). Đối chiếu ngày 10/10/2026. Các mốc [TB] trong sổ tay được dùng như giả thuyết ban đầu, không gắn nhãn benchmark.
 
 AI hỗ trợ trích dữ liệu, kiểm tra phép tính và soạn bản làm việc. Tác giả đã chọn P-100, B2B2C, dùng Day22 làm giả định và bổ sung kịch bản tài chính. Ngưỡng, luật và cổng trong bản này là đề xuất để tác giả đọc và viết lại theo lời mình trước khi nộp, đúng quy định dùng AI của đề bài.
 
