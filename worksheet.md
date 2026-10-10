@@ -1,6 +1,6 @@
 # Worksheet — P-100
 
-Nguyễn Văn An · 2A202602776 · 10/10/2026 (GMT+7)
+Nguyễn Văn An · 2A202602776 · 09/10/2026 (GMT+7)
 
 ## Số liệu đầu vào — kịch bản pilot B2B2C
 
@@ -31,21 +31,21 @@ CAC 32.000 USD trong `4_Channel_Fit!B20:B22` chỉ là kịch bản sales (8.000
 
 **Câu chốt loại:** P-100 chọn B2B2C vì đại lý/xưởng dự kiến trả phí, chủ xe là khách của xưởng và dùng trực tiếp ứng dụng Owner P-100 để hiểu kế hoạch rồi đặt lịch, còn xưởng xử lý trên cổng Advisor.
 
-PRD cho thấy mô hình tương tác; lựa chọn B2B2C do tác giả xác nhận ngày 10/10. Tài liệu chưa chứng minh quan hệ thương mại hôm nay. Nếu pilot chỉ cung cấp phần mềm cho nhân viên xưởng, không cho tiếp cận/đo người dùng cuối thì phải chuyển bảng B2B.
+PRD cho thấy mô hình tương tác; lựa chọn B2B2C do tác giả xác nhận ngày 09/10. Tài liệu chưa chứng minh quan hệ thương mại hôm nay. Nếu pilot chỉ cung cấp phần mềm cho nhân viên xưởng, không cho tiếp cận/đo người dùng cuối thì phải chuyển bảng B2B.
 
 **Toàn bộ bảng §3.3:** không có đèn được đánh ✅ chỉ từ PRD hay smoke test. 🔧 nghĩa là có cách thu trong pilot, không bảo đảm đã có cohort đủ tuổi.
 
 | Đèn trong HANDBOOK | Trạng thái | Cần gì / lịch có số |
 |---|---|---|
-| Partner activation rate | 🔧 | `partner_id`, ngày go-live, end-user thật; hai cohort 30 ngày, baseline 09/12/2026 |
-| End-user reach trong partner | 🔧 | Danh sách khách đủ điều kiện có đồng ý, event xem kế hoạch; 2 tuần baseline 24/10, đánh đỏ sau 60 ngày |
-| Time-to-first-end-user | 🔧 | Ngày ký và event chủ xe thật đầu tiên; ghi cả partner chưa activate, baseline 09/12 |
-| Volume volatility | 🔧 | Phiên thử theo partner; 2 tháng đủ lịch 09/12; không chọn trong 7 đèn vì cửa sổ dài ở pilot |
-| GM sau rev-share | 🔧 | Doanh thu đối soát, điều khoản chia, COGS riêng partner; thiết lập sổ chi phí 24/10, số tháng đầu 09/11 |
-| Inference / doanh thu từng partner | 🔧 | Trace token/model/retry theo partner + giá hóa đơn; thiết lập 24/10, tháng đầu 09/11 |
-| Tập trung volume | 🔧 | Booking confirmed theo partner, loại seed; 24/10; chưa chọn vì 1–2 pilot làm tỷ lệ tự nhiên rất cao |
-| Chất lượng nhìn từ end-user | 🔧 | Đối soát Confirmed/Completed/hủy, phản hồi có consent; 24/10; bắt buộc kiểm tra nguồn theo PRD |
-| Doanh thu/partner · NRR · GM tổng | 🔧 / ❌ | ARPU và GM tháng: sổ đối soát 09/11; NRR: ❌ chưa có cohort hợp đồng gia hạn hoặc lịch ký để định ngày đo |
+| Partner activation rate | 🔧 | `partner_id`, ngày go-live, end-user thật; hai cohort 30 ngày, baseline 08/12/2026 |
+| End-user reach trong partner | 🔧 | Danh sách khách đủ điều kiện có đồng ý, event xem kế hoạch; 2 tuần baseline 23/10, đánh đỏ sau 60 ngày |
+| Time-to-first-end-user | 🔧 | Ngày ký và event chủ xe thật đầu tiên; ghi cả partner chưa activate, baseline 08/12 |
+| Volume volatility | 🔧 | Phiên thử theo partner; 2 tháng đủ lịch 08/12; không chọn trong 7 đèn vì cửa sổ dài ở pilot |
+| GM sau rev-share | 🔧 | Doanh thu đối soát, điều khoản chia, COGS riêng partner; thiết lập sổ chi phí 23/10, số tháng đầu 08/11 |
+| Inference / doanh thu từng partner | 🔧 | Trace token/model/retry theo partner + giá hóa đơn; thiết lập 23/10, tháng đầu 08/11 |
+| Tập trung volume | 🔧 | Booking confirmed theo partner, loại seed; 23/10; chưa chọn vì 1–2 pilot làm tỷ lệ tự nhiên rất cao |
+| Chất lượng nhìn từ end-user | 🔧 | Đối soát Confirmed/Completed/hủy, phản hồi có consent; 23/10; bắt buộc kiểm tra nguồn theo PRD |
+| Doanh thu/partner · NRR · GM tổng | 🔧 / ❌ | ARPU và GM tháng: sổ đối soát 08/11; NRR: ❌ chưa có cohort hợp đồng gia hạn hoặc lịch ký để định ngày đo |
 
 ## Trạm 2 — 7 thẻ đèn / đúng 3 tầng
 
@@ -69,9 +69,9 @@ PRD cho thấy mô hình tương tác; lựa chọn B2B2C do tác giả xác nh�
 
 | ID | 🟢 | 🟡 | 🔴 | Nguồn / lý do / lịch baseline |
 |---|---|---|---|---|
-| D1 | ≥60% | 30% đến <60% | <30% | [TB], ưu tiên kích hoạt thay vì ký thêm, khung §3.3; 2 cohort 30 ngày, 09/12 |
-| D2 | ≥15% | 5% đến <15% | <5% khi partner đủ 60 ngày | [TB], thử phễu tiếp cận trước khi thêm feature; 2 chu kỳ tuần 24/10, đỏ chỉ ở cohort đủ tuổi |
-| D3 | <30 ngày | 30–60 ngày | >60 ngày | [TB], giới hạn thời gian học trước khi mất 2/3 chiến dịch; 2 cohort, 09/12; chưa có user vẫn tăng tuổi chờ |
+| D1 | ≥60% | 30% đến <60% | <30% | [TB], ưu tiên kích hoạt thay vì ký thêm, khung §3.3; 2 cohort 30 ngày, 08/12 |
+| D2 | ≥15% | 5% đến <15% | <5% khi partner đủ 60 ngày | [TB], thử phễu tiếp cận trước khi thêm feature; 2 chu kỳ tuần 23/10, đỏ chỉ ở cohort đủ tuổi |
+| D3 | <30 ngày | 30–60 ngày | >60 ngày | [TB], giới hạn thời gian học trước khi mất 2/3 chiến dịch; 2 cohort, 08/12; chưa có user vẫn tăng tuổi chờ |
 | D4 | ≤8,24% | >8,24% đến ≤16,48% | >16,48% | [MH] MH-2, dành nửa ngân sách inference làm vùng an toàn; trần đỏ làm tròn xuống để giữ GM ≥60% |
 | D5 | ≥74,43199% | ≥60% đến <74,43199% | <60% | [MH] MH-1, xanh bám GM mô hình Hybrid, đỏ đúng mục tiêu kinh tế; rev-share thực phải đưa vào |
 | D6 | ≥9.500.000đ | ≥6.072.403đ đến <9.500.000đ | <6.072.403đ | [MH] MH-3, xanh tại 400 job, sàn bảo vệ GM 60% với ngân sách 500 phiên thử |
@@ -171,24 +171,24 @@ Kiểm tra phản biện: R1 không coi partner mới go-live là thất bại; 
 
 ## Trạm 5 — Cổng gác và bằng chứng
 
-Ngày0 = 10/10/2026. GO khi đúng metric qua ngưỡng và có file bằng chứng. Nếu biết rõ nguyên nhân có thể FIX **một lần** trong 30 ngày, ghi vấn đề/người làm trong nhật ký; nếu giả định sai thì PIVOT; hết lần FIX vẫn không qua thì KILL. Không dời hạn 08/01/2027.
+Ngày0 = 09/10/2026. GO khi đúng metric qua ngưỡng và có file bằng chứng. Nếu biết rõ nguyên nhân có thể FIX **một lần** trong 30 ngày, ghi vấn đề/người làm trong nhật ký; nếu giả định sai thì PIVOT; hết lần FIX vẫn không qua thì KILL. Không dời hạn 07/01/2027.
 
 | Cổng / ngày | Một metric | Ngưỡng GO / lý do | Bằng chứng phải có | Nếu trượt |
 |---|---|---|---|---|
-| 30 / 09/11/2026 | Số phỏng vấn chủ xe thật hoàn tất bài test “hiểu kế hoạch rồi chọn lịch” | ≥8; [TB] 4 O2O +4 cá nhân để học chỗ khó hiểu ở 2 scenario, không suy thành tỷ lệ thị trường | `evidence/day30-owner-study.md`, 8 mã ẩn danh, consent, quan sát lỗi và trích đoạn câu trả lời | FIX một lần: sửa một điểm khó hiểu, kiểm lại 09/12; không tuyển được chủ xe thật thì PIVOT cách tiếp cận |
-| 60 / 09/12/2026 | Số partner đã activate | ≥2; [MH] 2 pilot là đơn vị của kịch bản burn, cần lặp giá trị ở hơn một xưởng | `evidence/day60-activation.csv`, partner_id, ngày ký/go-live, owner_id ẩn danh, event thật có timestamp | FIX onboarding/phân phối đến 08/01 nếu chưa dùng FIX cho vấn đề đó; đã FIX thất bại thì KILL |
-| 90 / 08/01/2027 | GM sau share thấp nhất trong 2 partner đã activate | ≥60% với tháng đối soát đầy đủ; [MH] GM mục tiêu, không lấy trung bình che lỗ | `evidence/day90-unit-economics.csv`, doanh thu, refund/share, invoice inference, infra, QA/support và monitoring phân bổ | PIVOT giá/đối tác nếu mới xác định giả định sai; đã FIX kinh tế một lần vẫn <60% thì KILL |
+| 30 / 08/11/2026 | Số phỏng vấn chủ xe thật hoàn tất bài test “hiểu kế hoạch rồi chọn lịch” | ≥8; [TB] 4 O2O +4 cá nhân để học chỗ khó hiểu ở 2 scenario, không suy thành tỷ lệ thị trường | `evidence/day30-owner-study.md`, 8 mã ẩn danh, consent, quan sát lỗi và trích đoạn câu trả lời | FIX một lần: sửa một điểm khó hiểu, kiểm lại 08/12; không tuyển được chủ xe thật thì PIVOT cách tiếp cận |
+| 60 / 08/12/2026 | Số partner đã activate | ≥2; [MH] 2 pilot là đơn vị của kịch bản burn, cần lặp giá trị ở hơn một xưởng | `evidence/day60-activation.csv`, partner_id, ngày ký/go-live, owner_id ẩn danh, event thật có timestamp | FIX onboarding/phân phối đến 07/01 nếu chưa dùng FIX cho vấn đề đó; đã FIX thất bại thì KILL |
+| 90 / 07/01/2027 | GM sau share thấp nhất trong 2 partner đã activate | ≥60% với tháng đối soát đầy đủ; [MH] GM mục tiêu, không lấy trung bình che lỗ | `evidence/day90-unit-economics.csv`, doanh thu, refund/share, invoice inference, infra, QA/support và monitoring phân bổ | PIVOT giá/đối tác nếu mới xác định giả định sai; đã FIX kinh tế một lần vẫn <60% thì KILL |
 
-**KILL CRITERIA:** Đến 08/01/2027, dừng hướng pilot B2B2C này nếu sau một lần FIX cho vấn đề tương ứng vẫn có <2 partner activate hoặc GM thấp nhất của 2 partner <60%; nếu không có dữ liệu đối soát để tính cổng90 thì không GO và dừng cấp ngân sách mở rộng cho đến khi đổi phương án có thể kiểm chứng.
+**KILL CRITERIA:** Đến 07/01/2027, dừng hướng pilot B2B2C này nếu sau một lần FIX cho vấn đề tương ứng vẫn có <2 partner activate hoặc GM thấp nhất của 2 partner <60%; nếu không có dữ liệu đối soát để tính cổng90 thì không GO và dừng cấp ngân sách mở rộng cho đến khi đổi phương án có thể kiểm chứng.
 
 Các tên file evidence là đầu ra phải thu trong pilot, **không** khẳng định file đang tồn tại. Không tạo log giả để làm bằng chứng. Nếu thiếu mẫu ở ngày cổng, cổng chưa qua; thiếu dữ liệu là lỗi thiết kế pilot cần FIX/PIVOT theo quy tắc, không được coi là xanh.
 
-**Chưa đo được:** chỉ gói trong 3 nhóm: (1) funnel/event partner và chủ xe thật, baseline tuần 24/10 và cohort30/60 ngày 09/12; (2) doanh thu/share, invoice AI, QA/support, giờ bán/CAC, đối soát đầu09/11 và đủ 2 tháng 09/12; (3) NRR cần hợp đồng gia hạn, không dùng làm đèn trong 90 ngày. An sở hữu sổ đo; đầu mối xưởng cấp dữ liệu có consent. Không có giá trị thiếu nào được thay bằng0.
+**Chưa đo được:** chỉ gói trong 3 nhóm: (1) funnel/event partner và chủ xe thật, baseline tuần 23/10 và cohort30/60 ngày 08/12; (2) doanh thu/share, invoice AI, QA/support, giờ bán/CAC, đối soát đầu08/11 và đủ 2 tháng 08/12; (3) NRR cần hợp đồng gia hạn, không dùng làm đèn trong 90 ngày. An sở hữu sổ đo; đầu mối xưởng cấp dữ liệu có consent. Không có giá trị thiếu nào được thay bằng0.
 
 ### Nguồn lưu vết
 
-- PRD: `Project/P-100/docs/ba/02-prd.md`, cập nhật04/10, đọc 10/10/2026; đặc biệt §1, §2, FR-06, BR-01, §6 và C-02.
+- PRD: `Project/P-100/docs/ba/02-prd.md`, cập nhật04/10, đọc 09/10/2026; đặc biệt §1, §2, FR-06, BR-01, §6 và C-02.
 - Day22: `Track1_Day22_2A202602776_NguyenVanAn/NguyenVanAn_Day22_model.xlsx`; SHA256 `01a77513aea22b2e00c9488ad6eec16e0b197657224778f4fb7b473a450549db`. Đọc công thức và tự tính, không dựa vào cache Excel. Không sửa workbook nguồn.
 - Critique log ngày 08/10: DMS10 USD/tháng, OA 41.667đ/tháng, setup50–100 USD, monitoring29 USD/tháng. Đây là giả định nguồn của bài trước, không phải báo giá kiểm tra hôm nay.
-- HANDBOOK §§2/3.3 kiểm tra 10/10: https://github.com/VinUni-AI20k/K4-L3-Day23-AI-Product-Growth/blob/main/HANDBOOK.md
+- HANDBOOK §§2/3.3 kiểm tra 09/10: https://github.com/VinUni-AI20k/K4-L3-Day23-AI-Product-Growth/blob/main/HANDBOOK.md
 - AI hỗ trợ dự thảo và phản biện; tác giả cần đọc, chốt ngưỡng/luật/cổng bằng lời mình. Không tự chấm điểm hoặc khẳng định pilot được nghiệm thu.
